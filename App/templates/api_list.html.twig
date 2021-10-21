@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title  "Home page" %}
+
+{% block body %}
+	<h1>SHOW ALL STUDENTS
+	</h1>
+	<h2>Number of students
+		{{students|length}}</h2>
+	<h3>
+		<a href="{{ path('ShowALLStudents') }}" type="button" class="btn btn-danger">Cancel</a>
+	</h3>
+	<h4>
+		{% for message in app.flashes("success") %}
+			<div class="alert alert-success" role="alert">
+				{{message}}
+			</div>
+		{% endfor %}
+	</h4>
+	<table id="articles" class="table table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">First Name</th>
+				<th scope="col">Last Name</th>
+				<th scope="col">Student Number</th>
+				<th scope="col">Dep-Name</th>
+				<th scope="col">Capacity</th>
+				<th scope="col">ACTION</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			{% for student in students %}
+				<tr>
+					<th scope="row">{{student.id}}</th>
+					<td>{{student.FirstName}}</td>
+					<td>{{student.LastName}}</td>
+					<td>{{student.NumEtud}}</td>
+					<td>{{student.department.Name}}</td>
+					<td>{{student.department.capacity}}</td>
+					<td>
+						<a href="{{ path('update',{'id':student.id}) }}" type="button" class="btn btn-info">EDIT</a>
+						<a href="{{ path('delete',{'id':student.id}) }}" type="button" class="btn btn-danger delete-student" data-id="{{student.id}}">DELETE</a>
+
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<div>
+		<a class="btn btn-primary" href="{{ path('api_student_index') }}">Get STUDENT API LIST</a>
+	</div>
+
+{% endblock %}
+{% block javascripts %}
+	<script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+{% endblock %}

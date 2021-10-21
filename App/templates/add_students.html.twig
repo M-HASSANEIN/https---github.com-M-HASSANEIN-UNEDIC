@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% form_theme formAdd 'bootstrap_5_layout.html.twig' %}
+{% block title  "Add-Student" %}
+
+{% block body %}
+	<h1>ADD-STUDENT</h1>
+
+	<h3>
+		<a href="{{ path('ShowALLStudents') }}" type="button" class="btn btn-danger">Cancel</a>
+	</h3>
+	<div>
+		{{form_start(formAdd)}}
+		{{form_row(formAdd.FirstName,{"attr":{"placeholder":"FirstName"}})}}
+		{{form_row(formAdd.LastName,{"attr":{"placeholder":"LastName"}})}}
+		{{form_row(formAdd.NumEtud,{"attr":{"placeholder":"NumEtud"}})}}
+		{{form_row(formAdd.department.Name , {'label': 'Department-Name','attr': {'placeholder': 'Dep-Name'}}) }}
+		{{form_row(formAdd.department.Capacity,{"attr":{"placeholder":"Capacity"}})}}
+		<button type="submit" class="btn btn-success">ADD-STUDENT</button>
+		{{form_end(formAdd)}}
+	</div>
+{% endblock %}

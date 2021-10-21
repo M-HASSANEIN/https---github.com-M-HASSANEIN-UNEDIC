@@ -1,0 +1,8 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+#Student_list:
+       #path : /api/v1/students
+       #conroller : App\Controller\ApiStudentController
+       #methods : [GET]
+     

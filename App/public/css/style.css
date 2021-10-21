@@ -1,0 +1,21 @@
+/* Box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* 1rem = 10px */
+html {
+  font-size: 85%;
+}
+
+/* Body */
+body {
+  font-size: 2rem;
+  font-family: "Homenaje", sans-serif;
+}
+.btn {
+  font-size: 1.6rem;
+}
+/* *****************************************************************
+MODAL
+***************************************************************** */
