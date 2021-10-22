@@ -16,9 +16,9 @@ class ApiStudentController extends AbstractController
 
     public function __invoke(): Response
     {
-        $students = $this->getDoctrine()->getRepository(persistentObject:Student::class)->findAll();
+        /*  $students = $this->getDoctrine()->getRepository(persistentObject:Student::class)->findAll(); */
 
-        return $this->render('api_list.html.twig', ["students" => $students]);
+        return $this->render('api_list.html.twig', /* ["students" => $students] */);
     }
 
 }

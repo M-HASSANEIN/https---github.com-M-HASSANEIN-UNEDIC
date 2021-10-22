@@ -1,5 +1,4 @@
 
-
 let button;
 document.addEventListener('DOMContentLoaded', function () {
     function delestudent(event) {
@@ -29,22 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
         yes.addEventListener("click", () => {
             window.location = this.href;
         });
-
-
-
-
-
-
-
-
-
-
-
-
-        /* 
-                if (confirm("Are you sure you want to delete this student ?")) {
-                    window.location = this.href
-                } */
     }
 
     button = document.querySelectorAll(".delete-student");

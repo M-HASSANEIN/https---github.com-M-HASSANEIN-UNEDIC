@@ -13,8 +13,8 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ApiResource(
  *  normalizationContext={"groups":"student:read"},
  *  collectionOperations={
- * "get"={},
- * "post"={}
+ * "get",
+ * "post",
  * }
  * )
  */
