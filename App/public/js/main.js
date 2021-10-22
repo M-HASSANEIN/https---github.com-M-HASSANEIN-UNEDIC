@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function delestudent(event) {
         event.preventDefault();
         const id = event.target.getAttribute("data-id")
-        console.log(id)
+        /*  console.log(id) */
 
         let overlay = document.getElementById("overlay");
         console.log(overlay)
